@@ -19,6 +19,10 @@ int main() {
     TCB0.CCMPH = 0x3F; // PWMパルス幅
     TCB0.CTRLB = TCB_CCMPEN_bm | TCB_CNTMODE_PWM8_gc;
     TCB0.CTRLA = TCB_CLKSEL_CLKDIV2_gc | TCB_ENABLE_bm;
+
+    sei();
+    while (1) {
+    }
 }
 
 volatile uint8_t count = 0;
